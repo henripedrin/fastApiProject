@@ -16,3 +16,4 @@ class CompanyService:
         repository = CompanyRepository()
         company = repository.get_id(id)
         return company
+
