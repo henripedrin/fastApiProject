@@ -11,7 +11,7 @@ router = APIRouter(prefix="/typeProduct", tags=["TypeProduct"])
 
 
 @router.get("/", response_model=list[Type])
-def list_companies():
+def list_typeProducts():
     service = ProductService()
     return service.get_products()
     # return service.get_products()

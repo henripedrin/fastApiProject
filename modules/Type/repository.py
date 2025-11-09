@@ -9,7 +9,7 @@ class ProductRepository:
 
     def get_all(self):
         db = DataBase()
-        produtos = db.execute(self.QUERY_TYPEPRODUCT_ID)
+        produtos = db.execute(self.QUERY_TYPEPRODUCT)
         results = []
         for produto in produtos:
             results.append({"id" : produto[0], "name": produto[1]})

@@ -13,7 +13,7 @@ class SupplierRepository(DataBase):
         results = []
         for supplier in suppliers:
             results.append({"id": supplier[0], "name": supplier[1]})
-        return suppliers
+        return results
 
     def save(self, supplier: SupplierCreate):
         db = DataBase()
