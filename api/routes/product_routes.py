@@ -1,7 +1,6 @@
 from typing import Optional, List
 
 from fastapi import APIRouter, HTTPException
-from rich import status
 
 from modules.product import schemas, service
 from modules.product.schemas import ProductCreate, Product
@@ -10,7 +9,7 @@ from modules.product.service import ProductService
 
 # from app.modules.company import service, schemas
 
-router = APIRouter(prefix="/company", tags=["Company"])
+router = APIRouter(prefix="/product", tags=["Product"])
 
 
 @router.get("/", response_model=list[schemas.Product])

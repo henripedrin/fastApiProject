@@ -5,7 +5,7 @@ from modules.Type.schemas import TypeCreate
 class ProductService:
     def get_products(self):
         repository = ProductRepository
-        return repository.get_all()
+        return repository().get_all()
 
     def create_product(self, product: TypeCreate):
         if not product.name or product.name.strip() == "":

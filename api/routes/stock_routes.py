@@ -5,7 +5,7 @@ from fastapi import APIRouter
 from modules.stock.schemas import Stock, StockCreate
 from modules.stock.service import StockService
 
-router = APIRouter(prefix="stock", tags=["Stock"])
+router = APIRouter(prefix="/stock", tags=["Stock"])
 
 @router.get("/",  response_model=list[Stock])
 def list_stocks():
